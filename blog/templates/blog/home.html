@@ -127,6 +127,14 @@
                 <div class="text-block">
                     <div class="section-heading">
 
+                        <p>投稿するにはログインが必要です</p>
+                        <form action="{% url 'post-create' %}">
+                            <button type="submit" class="btn btn-primary slide">New Post<i
+                                    class="fa fa-caret-right"></i>
+                            </button>
+                        </form>
+
+
                         {% for post in posts  %}
                         <h1><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a><small>written by: </small>
                             <span>{{ post.author }}</span></h1>
@@ -137,8 +145,7 @@
                         <hr>
                         {% endfor %}
                     </div>
-                    <button type="button" class="btn btn-primary slide">Learn More <i class="fa fa-caret-right"></i>
-                    </button>
+
 
 
                 </div>
